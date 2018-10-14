@@ -65,8 +65,8 @@ class AddMassBranchSubscriber implements EventSubscriberInterface
 
         if (isset($removeBranchList)) {
             $removeBranches = explode(',', $removeBranchList);
-            $flipedBranches = array_flip($removeBranches);
-            $choices = array_diff_key($choices, $flipedBranches);
+            $flippedBranches = array_flip($removeBranches);
+            $choices = array_diff_key($choices, $flippedBranches);
         }
 
         $form->add(
